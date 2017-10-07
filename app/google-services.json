@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "1077172602869",
+    "firebase_url": "https://ringtones-2709e.firebaseio.com",
+    "project_id": "ringtones-2709e",
+    "storage_bucket": "ringtones-2709e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1077172602869:android:52456702ddc4f2ed",
+        "android_client_info": {
+          "package_name": "com.example.wangl_000.music_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1077172602869-i2vit0gq11gbfeapm0mu8nij7asqhhrv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.wangl_000.music_project",
+            "certificate_hash": "3f86403d295b65c5b91cf73ae56d0e602b215c67"
+          }
+        },
+        {
+          "client_id": "1077172602869-fk81g5dk0881he3r5tg57mna14toh5ft.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4xzQaFrGPY0lXyxxEYXZ9wC711PVC2u4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1077172602869-fk81g5dk0881he3r5tg57mna14toh5ft.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1077172602869-d6e5a1dtv3gcp8lql96m1g8ro1q02rl1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.caesar.music"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

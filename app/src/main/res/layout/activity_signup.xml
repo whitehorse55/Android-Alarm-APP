@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_horizontal"
+    android:background="@drawable/back_sign"
+    tools:context="com.example.wangl_000.music_project.activity.LoginActivity">
+
+    <ProgressBar
+        android:id="@+id/singup_progress"
+        style="?android:progressBarStyleLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/singup_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <AutoCompleteTextView
+                    android:id="@+id/singup_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Username"
+                    android:inputType="textPersonName"
+                    android:textColor="#FFFFFF"
+                    android:maxLines="1" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <AutoCompleteTextView
+                    android:id="@+id/singup_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email"
+                    android:textColor="#FFFFFF"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <AutoCompleteTextView
+                    android:id="@+id/singup_password"
+                    android:layout_width = "match_parent"
+                    android:layout_height = "wrap_content"
+                    android:hint="Password"
+                    android:textColor="#FFFFFF"
+                    android:inputType="textPassword"
+                    android:imeActionId="@+id/login"
+
+                    android:maxLines="1"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/singup_button"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:text="SignUp"
+                android:textColor="@color/colorPrimary"/>
+
+
+        </LinearLayout>
+
+
+</LinearLayout>

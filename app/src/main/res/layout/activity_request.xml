@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.wangl_000.music_project.activity.RequestActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <Button
+                android:id="@+id/req_back_button"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_keyboard_backspace_black_24dp" />
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <RelativeLayout
+            android:id="@+id/lay_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true">
+
+            <TextView
+                android:id="@+id/txt_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="31dp"
+                android:gravity="center_vertical"
+                android:text="@string/req_title"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:id="@+id/txt_req_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_title"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:text="@string/req_content"
+                android:textAlignment="center"
+                android:textSize="22dp"
+                android:textColor="#000000"/>
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lay_top"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/reg_down_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="31dp"
+                android:gravity="center_vertical"
+                android:text="@string/req_down_title"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/reg_down_title"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:text="@string/req_down_content"
+                android:textAlignment="center"
+                android:textSize="22dp"
+                android:textColor="#000000"/>
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

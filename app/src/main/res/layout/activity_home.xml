@@ -1,0 +1,158 @@
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.wangl_000.music_project.activity.HomeActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+            <!--<Button-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="aaa"/>-->
+
+            <ImageButton
+                android:id="@+id/share"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/upload1"
+                android:gravity="center"
+                android:padding="1dp"
+                android:cropToPadding="true"
+                android:scaleType="centerCrop"
+                android:backgroundTint="#0080ff"
+               />
+
+            <info.hoang8f.android.segmented.SegmentedGroup xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/mapTypeSegment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                segmentedgroup:sc_border_width="2dp"
+                segmentedgroup:sc_corner_radius="5dp"
+                segmentedgroup:sc_tint_color="#0080ff">
+
+                <RadioButton
+                    android:id="@+id/seg_featured"
+                    style="@style/RadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/featured" />
+
+                <RadioButton
+                    android:id="@+id/seg_recent"
+                    style="@style/RadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/recent" />
+
+
+            </info.hoang8f.android.segmented.SegmentedGroup>
+
+            <ImageButton
+                android:id="@+id/information"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/info1"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="right"
+                android:padding="1dp"
+                android:cropToPadding="true"
+                android:scaleType="centerCrop"
+                android:backgroundTint="#0080ff"/>
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1.0"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#c2c3c4">
+
+            <EditText
+                android:id="@+id/search_edit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dp"
+                android:background="@drawable/custom_serach"
+                android:drawableLeft="@android:drawable/ic_menu_search"
+                android:drawablePadding="10dp"
+                android:inputType="text"
+                android:maxLines="1"
+                android:minHeight="60dp"
+                android:textAlignment="center"
+                android:imeOptions="actionDone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lay_gone"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="vertical"
+            android:weightSum="1.0">
+
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.99">
+
+            </android.support.v4.view.ViewPager>
+
+            <me.relex.circleindicator.CircleIndicator
+                android:id="@+id/indicator"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_weight="0.01"
+                app:ci_drawable="@drawable/custom_color"
+                app:ci_height="7dp"
+                app:ci_width="7dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.0">
+
+            <ListView
+                android:id="@+id/custom_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/custom_listview"
+                android:dividerHeight="0dp"
+                android:minHeight="80dp"
+                android:divider="@android:color/transparent">
+
+            </ListView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

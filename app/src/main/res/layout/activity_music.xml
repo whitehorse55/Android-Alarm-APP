@@ -1,0 +1,256 @@
+
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.wangl_000.music_project.activity.HomeActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#FFFFFF"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <Button
+                android:id="@+id/back_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/left_arrow" />
+
+            <!--<Button-->
+            <!--android:layout_width="50dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@drawable/ic_get_app_black_24dp"-->
+            <!--android:layout_gravity="right"-->
+            <!--android:layout_marginRight="10dp"/>-->
+            <Button
+                android:id="@+id/music_get_button"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_gravity="right"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/custom_button"
+                android:text="GET"
+                android:textColor="#0080ff"
+                android:textAlignment="center" />
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1.0"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.6">
+
+            <ImageView
+                android:id="@+id/music_image_icon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
+            android:orientation="vertical"
+            android:background="@drawable/custom_listview"
+            android:weightSum="1.0">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.9"
+                android:orientation="horizontal"
+                android:weightSum="1.0">
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.1"
+                    android:background="@drawable/ic_music_note_black_24dp"/>
+                <SeekBar
+                    android:id="@+id/music_seekbar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.9"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="5dp"
+                    android:thumb="@drawable/thumb"
+                    android:progressDrawable="@drawable/progress_xml"/>
+                    </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="0.1"
+                android:weightSum="1.0">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:textSize="15dp"
+                    android:layout_weight="0.3"
+                    android:layout_marginLeft="20dp"
+                    android:text="00:00" />
+
+                <TextView
+                    android:id="@+id/time_current"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="15dp"
+                    android:layout_weight="0.4"
+                    android:layout_gravity="center"
+                    android:text="dfdfdf"/>
+
+                <TextView
+                    android:id="@+id/time_end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:layout_gravity="right"
+                    android:gravity="end"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="0.3"
+                    android:text="gdgdgd" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
+            android:orientation="horizontal"
+            android:weightSum="1.0"
+            android:background="@drawable/custom_listview">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="0.1"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_record_voice_over_black_24dp"/>
+            <TextView
+                android:id="@+id/music_song_name"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.9"
+                android:fontFamily="monospace"
+                android:padding="1dp"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
+            android:orientation="horizontal"
+            android:weightSum="1.0"
+            android:background="@drawable/custom_listview">
+
+
+            <TextView
+                android:id="@+id/button3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2" />
+
+            <Button
+                android:id="@+id/button_prev"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="0.15"
+                android:background="@drawable/rewind_button_arrows" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.05" />
+
+            <Button
+                android:id="@+id/button_pause"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.15"
+                android:background="@drawable/ic_pause_circle_filled_black_24dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.05" />
+
+            <Button
+                android:id="@+id/button_next"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="20dp"
+                android:layout_weight="0.15"
+                android:background="@drawable/fast_forward_button"/>
+
+            <TextView
+                android:id="@+id/button4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
+            android:background="@drawable/custom_listview"
+            android:orientation="horizontal"
+            android:weightSum="1.0">
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_weight="0.1"
+                android:background="@drawable/ic_volume_off_black_24dp"/>
+
+            <SeekBar
+                android:id="@+id/volume_seek"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.8"
+                android:progressDrawable="@drawable/progress_xml"
+                android:thumb="@drawable/thumb" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_weight="0.1"
+                android:background="@drawable/ic_volume_up_black_24dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>
